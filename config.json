@@ -1,0 +1,20 @@
+{
+  "packProgram": true,
+  "userName": "Steven",
+  "action": "新增",
+  "verifierName": "Sam",
+  "testerName": "Sam",
+  "sourceExcel": "/Users/Lunaspeed/Documents/BI/72/test.xlsx",
+  "targetExcel": "/Users/Lunaspeed/Documents/BI/72/test-result.xlsx",
+  "settings": {
+    "projectRoot": "/Users/Lunaspeed/Projects/BI/MEGA-SRC",
+    "classRelativePath": "WebContent/WEB-INF/classes",
+    "projectTargetRoot": "/Users/Lunaspeed/Documents/BI/72/target",
+    "classRelativeTargetPath": "WEB-INF/classes",
+    "replaceWebContent": true,
+    "sourceOnly": false,
+    "javaClassTogether": true,
+    "pathStartsWithProjectName": true,
+    "webContentName": "WebContent"
+  }
+}

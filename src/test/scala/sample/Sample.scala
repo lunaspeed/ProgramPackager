@@ -1,0 +1,5 @@
+package sample
+
+object Sample {
+
+}

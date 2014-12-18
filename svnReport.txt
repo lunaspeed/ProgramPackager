@@ -1,0 +1,46 @@
+SVN Report
+Total Files: 38
+Files With Different modifiers (steven):
+\MEGA-SRC\FPN\com\bi\wms\fpn\financial\web\CfaComparator.java
+\MEGA-SRC\WebContent\images\mw_Open.png
+\MEGA-SRC\WebContent\images\mw_Close.png
+\MEGA-SRC\WebContent\images\fp_login_main.jpg
+\MEGA-SRC\WebContent\jsp\fpn\financial\include\educationPlanReportTables.jsp
+\MEGA-SRC\WebContent\jsp\fpn\financial\include\financialIndexTable.jsp
+\MEGA-SRC\WebContent\jsp\fpn\financial\include\healthCheck.jsp
+\MEGA-SRC\WebContent\jsp\fpn\financial\include\incomeExpanseTabs.jsp
+\MEGA-SRC\WebContent\jsp\fpn\financial\include\incomeExpenseOverviewTable.jsp
+\MEGA-SRC\WebContent\jsp\fpn\financial\include\installmentPlanTable.jsp
+\MEGA-SRC\WebContent\jsp\fpn\financial\include\reportProductList.jsp
+\MEGA-SRC\WebContent\jsp\fpn\financial\include\retirePlanReportTable.jsp
+\MEGA-SRC\WebContent\jsp\fpn\financial\assetDebt.jsp
+\MEGA-SRC\WebContent\jsp\fpn\financial\carPlan.jsp
+\MEGA-SRC\WebContent\jsp\fpn\financial\cashFlowAnalysis.jsp
+\MEGA-SRC\WebContent\jsp\fpn\financial\chooseProducts.jsp
+\MEGA-SRC\WebContent\jsp\fpn\financial\educationPlanStep1.jsp
+\MEGA-SRC\WebContent\jsp\fpn\financial\educationPlanStep2.jsp
+\MEGA-SRC\WebContent\jsp\fpn\financial\educationPrice.jsp
+\MEGA-SRC\WebContent\jsp\fpn\financial\financeIndex.jsp
+\MEGA-SRC\FPN\com\bi\wms\fpn\common\service\impl\FpnRiskalertsManagerImpl.java
+\MEGA-SRC\FPN\com\bi\wms\fpn\common\service\FpnCusRelativeFriendsManager.java
+\MEGA-SRC\FPN\com\bi\wms\fpn\common\service\FpnCustomersManager.java
+\MEGA-SRC\FPN\com\bi\wms\fpn\common\service\FpnFpfilesManager.java
+\MEGA-SRC\FPN\com\bi\wms\fpn\common\service\FpnPladjustFilesManager.java
+\MEGA-SRC\FPN\com\bi\wms\fpn\common\service\FpnPlancatsManager.java
+\MEGA-SRC\FPN\com\bi\wms\fpn\common\service\FpnPlmanageFilesManager.java
+\MEGA-SRC\FPN\com\bi\wms\fpn\common\service\FpnRiskalertsManager.java
+\MEGA-SRC\FPN\com\bi\wms\fpn\common\web\AbstractFpnAction.java
+\MEGA-SRC\FPN\com\bi\wms\fpn\common\web\FpnFpfilesAction.java
+\MEGA-SRC\FPN\com\bi\wms\fpn\common\web\FpnPladjustFilesAction.java
+\MEGA-SRC\FPN\com\bi\wms\fpn\common\web\FpnPlmanageFilesAction.java
+\MEGA-SRC\FPN\com\bi\wms\fpn\cus\web\FpnCusInfoAction.java
+\MEGA-SRC\FPN\com\bi\wms\fpn\cus\web\FpnCusRelationInfoAction.java
+\MEGA-SRC\FPN\com\bi\wms\fpn\cus\web\FpnCusInfoAction_zh_TW.properties
+\MEGA-SRC\FPN\com\bi\wms\fpn\cus\web\FpnCusInfoAction_zh_TW.utf-8
+\MEGA-SRC\FPN\com\bi\wms\fpn\cus\web\FpnCusRelationInfoAction_zh_TW.properties
+
+Files not synced within last 1 day:
+
+
+Files not found in Local SVN:
+Test.SQL

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * Copyright (c) 2011, 2013 Oracle and/or its affiliates.
+ * All rights reserved. Use is subject to license terms.
+ *
+ * This file is available and licensed under the following license:
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ *  - Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *  - Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in
+ *    the documentation and/or other materials provided with the distribution.
+ *  - Neither the name of Oracle Corporation nor the names of its
+ *    contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+
+<GridPane fx:controller="com.bi.programlist.ui.javafx.MainFxController" 
+    xmlns:fx="http://javafx.com/fxml" alignment="TOP_CENTER" hgap="10" vgap="10" 
+    styleClass="root">
+  <padding><Insets top="15" right="25" bottom="10" left="25" /></padding>
+  
+  <Text id="welcome-text" text="Welcome" 
+      GridPane.columnIndex="0" GridPane.rowIndex="0" 
+      GridPane.columnSpan="2"/>
+  
+  <Label text="專案目錄:"
+      GridPane.columnIndex="0" GridPane.rowIndex="1" />
+  
+  <TextField fx:id="projectRoot" promptText="選擇專案目錄"
+      GridPane.columnIndex="1" GridPane.rowIndex="1" />
+  <Button text="選擇目錄" 
+      onAction="#handleProjectRootButtonAction" 
+      GridPane.columnIndex="2" GridPane.rowIndex="1" />
+  
+  <Label text="CLASSES相對路徑:" 
+      GridPane.columnIndex="0" GridPane.rowIndex="2" />
+  
+  <TextField fx:id="classRelativePath"
+      GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      
+  <Label text="複製專案目錄:" 
+      GridPane.columnIndex="3" GridPane.rowIndex="1" />
+  
+  <TextField fx:id="projectTargetRoot" promptText="選擇目錄"
+      GridPane.columnIndex="4" GridPane.rowIndex="1" />
+  <Button text="選擇目錄" 
+      onAction="#handleClassSourceButtonAction" 
+      GridPane.columnIndex="5" GridPane.rowIndex="1" />
+      
+  <Label text="CLASSES目的相對路徑:" 
+      GridPane.columnIndex="3" GridPane.rowIndex="2" />
+  
+  <TextField fx:id="classRelativeTargetPath" 
+      GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      
+      
+  <CheckBox fx:id="packProgram" text="複製程式"
+      GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="2"/>
+ 
+  <Label text="原始程式清單(xslx):"
+      GridPane.columnIndex="0" GridPane.rowIndex="8" />
+  
+  <TextField fx:id="sourceExcel" promptText="選擇檔案" editable="false"
+      GridPane.columnIndex="1" GridPane.rowIndex="8" />
+  <Button text="選擇檔案" 
+      onAction="#handleSourceExcelButtonAction" 
+      GridPane.columnIndex="2" GridPane.rowIndex="8" />
+      
+  <Label text="結果程式清單(xslx):"
+      GridPane.columnIndex="0" GridPane.rowIndex="9" />
+  
+  <TextField fx:id="targetExcel" promptText="選擇檔案" editable="false"
+      GridPane.columnIndex="1" GridPane.rowIndex="9" />
+  <Button text="選擇檔案" 
+      onAction="#handleTargetExcelButtonAction" 
+      GridPane.columnIndex="2" GridPane.rowIndex="9" />
+      
+  <Label text="異動人員:"
+      GridPane.columnIndex="0" GridPane.rowIndex="10" />
+  
+  <TextField fx:id="userName" promptText="人員名稱"
+      GridPane.columnIndex="1" GridPane.rowIndex="10" />
+      
+  <Label text="異動人員SVN:"
+      GridPane.columnIndex="3" GridPane.rowIndex="10" />    
+  <TextField fx:id="userSvn" promptText="SVN帳號" 
+    GridPane.columnIndex="4" GridPane.rowIndex="10"/>
+    
+  <Label text="覆核人員:"
+      GridPane.columnIndex="0" GridPane.rowIndex="11" />
+  <TextField fx:id="verifierName" promptText="人員名稱"
+      GridPane.columnIndex="1" GridPane.rowIndex="11" />
+  <Label text="異動狀態:"
+      GridPane.columnIndex="3" GridPane.rowIndex="11" />    
+  <ChoiceBox fx:id="fileAction" 
+    GridPane.columnIndex="4" GridPane.rowIndex="11">
+    <items>
+        <FXCollections fx:factory="observableArrayList">
+            <String fx:value="新增" />
+            <String fx:value="修改" />
+            <String fx:value="刪除" />
+        </FXCollections>
+    </items>
+  </ChoiceBox>    
+  <Label text="測試人員:"
+      GridPane.columnIndex="0" GridPane.rowIndex="12" />
+  <TextField fx:id="testerName" promptText="人員名稱"
+      GridPane.columnIndex="1" GridPane.rowIndex="12" />
+  
+  <TitledPane text="Advanced Setting" expanded="false"
+        GridPane.columnIndex="0" GridPane.rowIndex="15"
+        GridPane.columnSpan="6">
+        
+    <GridPane alignment="top_left" styleClass="root" hgap="10" vgap="5" >
+       <padding><Insets top="5" right="5" bottom="5" left="5" /></padding>
+       
+       <CheckBox fx:id="sourceOnly" text="只包原始碼"
+            GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+       <CheckBox fx:id="javaClassTogether" text="Source Files與CLASS同目錄"
+            GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2"/>
+       <CheckBox fx:id="pathStartsWithProjectName" text="路徑包含Project Folder" selected="true"
+            GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2"/>
+            
+       <Label text="WebContent Name:"
+            GridPane.columnIndex="3" GridPane.rowIndex="0" />
+  
+       <TextField fx:id="webContentName" promptText="Ex. WebContent"
+            GridPane.columnIndex="4" GridPane.rowIndex="0" />
+       <CheckBox fx:id="replaceWebContent" text="War Name取代WebContent Name"
+            GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.columnSpan="2"/>
+    </GridPane>
+  </TitledPane>
+
+  <HBox spacing="10" alignment="bottom_right" 
+      GridPane.columnIndex="5" GridPane.rowIndex="16">
+      <Button fx:id="svnButton" text="Check SVN"
+        onAction="#handleSvnButtonAction" />
+      <Button fx:id="submitButton" text="Submit" 
+       onAction="#handleSubmitButtonAction" />
+  </HBox>
+  
+  <Text fx:id="actiontarget" GridPane.valignment="TOP"
+      GridPane.columnIndex="0" GridPane.rowIndex="17" GridPane.columnSpan="2"/>
+  <Text fx:id="actiontarget2" GridPane.valignment="TOP" 
+      GridPane.columnIndex="2" GridPane.rowIndex="17" GridPane.columnSpan="2"/>
+  <VBox alignment="center" fx:id="successButtons" visible="false" spacing="20"
+    GridPane.columnIndex="4" GridPane.rowIndex="17">
+      <Button fx:id="openTargetExcel" text="開啟檔案Excel" 
+        onAction="#handleOpenTargetExcelButtonAction"/>
+      <Button fx:id="openTargetPath" text="開啟檔案路徑"  
+        onAction="#handleOpenTargetPathButtonAction"/>
+      <Button fx:id="successOpenLog" text="開啟Log" 
+        onAction="#handleOpenLogButtonAction"/>
+  </VBox>
+  <VBox alignment="center" fx:id="failureButtons" visible="false"
+    GridPane.columnIndex="4" GridPane.rowIndex="17">
+      <Button fx:id="openLog" text="開啟Log" 
+        onAction="#handleOpenLogButtonAction"/>
+  </VBox>
+  <stylesheets>
+    <URL value="@MainFx.css" />
+  </stylesheets>
+  
+</GridPane>
