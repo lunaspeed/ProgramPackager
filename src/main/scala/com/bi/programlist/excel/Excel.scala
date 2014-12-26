@@ -42,6 +42,7 @@ object Excel extends LazyLogging {
     val fp = row.getCell(0).getStringCellValue()
     val action = Option(row.getCell(1)).map(_.getStringCellValue())
     val proj = Option(row.getCell(2)).map(_.getStringCellValue())
+   //logger.info(fp + ":" + action.getOrElse("-none-"))
     (fp, action, proj)
   }
     

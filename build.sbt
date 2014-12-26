@@ -21,7 +21,7 @@ resolvers += "spray" at "http://repo.spray.io/"
 val log4jVersion = "2.1"
 
 libraryDependencies ++= Seq(
-    "org.apache.poi" % "poi-ooxml" % "3.11-beta3",
+    "org.apache.poi" % "poi-ooxml" % "3.11",
     "com.jsuereth" %% "scala-arm" % "1.4",
     "io.spray" %%  "spray-json" % "1.2.6",
     "org.apache.commons" % "commons-lang3" %"3.1",

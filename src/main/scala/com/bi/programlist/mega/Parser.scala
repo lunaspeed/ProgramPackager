@@ -100,12 +100,12 @@ object Parser extends LazyLogging {
         def pairToList(p: Tuple2[ProgInfo, ProgInfo]): List[Option[String]] = p match {
           case (_, t) => {
             val path = t.path match {
-              case p @ (_ :: Nil) => Nil
+              case _ :: Nil => Nil
               case p => (p.drop(gi.setting.projectTargetRoot.length + 1) dropRight 1) :+ ""
             }
             None :: None :: None :: None :: None :: None :: 
             Some(t.project) :: Some(t.extension) :: Some(path.mkString(separator.toString)) :: 
-            Some(t.path.last) :: Some(gi.userName) :: Some(gi.defaultAction) :: Some(gi.verifierName) :: Some(gi.testerName) :: Nil
+            Some(t.path.last) :: Some(gi.userName) :: Some(t.action) :: Some(gi.verifierName) :: Some(gi.testerName) :: Nil
           }
         }
         logger.info("start writing to excel")
